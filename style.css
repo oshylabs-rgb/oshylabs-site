@@ -822,6 +822,42 @@
 .about__inner {
   max-width: var(--content-default);
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: clamp(var(--space-8), 5vw, var(--space-16));
+}
+
+.about__portrait {
+  flex-shrink: 0;
+}
+
+.about__img {
+  width: clamp(160px, 20vw, 260px);
+  height: clamp(160px, 20vw, 260px);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(1);
+  transition: filter 0.4s ease;
+}
+
+.about__img:hover {
+  filter: grayscale(0);
+}
+
+.about__content {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .about__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about__links {
+    justify-content: center;
+  }
 }
 
 .about__text {
