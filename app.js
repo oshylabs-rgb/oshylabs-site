@@ -79,7 +79,7 @@
 // Scroll reveal
 // ===========================
 (function () {
-  const els = document.querySelectorAll('.product-card, .stack-item, .about__content, .section-header, .hero__stats');
+  const els = document.querySelectorAll('.product-card, .pricing-card, .pricing-details, .stack-item, .about__content, .section-header, .hero__stats');
 
   els.forEach(el => el.classList.add('reveal'));
 
