@@ -500,6 +500,11 @@
   color: var(--color-building);
 }
 
+.product-card__badge--parked {
+  background: color-mix(in srgb, var(--color-text-muted) 12%, transparent);
+  color: var(--color-text-muted);
+}
+
 .product-card__name {
   font-family: var(--font-display);
   font-size: var(--text-lg);
