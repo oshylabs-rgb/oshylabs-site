@@ -79,7 +79,7 @@
 // Scroll reveal
 // ===========================
 (function () {
-  const els = document.querySelectorAll('.product-card, .pricing-card, .pricing-details, .stack-item, .about__content, .section-header, .hero__stats');
+  const els = document.querySelectorAll('.product-card, .pricing-card, .pricing-details, .stack-item, .about__content, .section-header, .hero__stats, .challenge__header, .challenge__stats, .challenge__tracker');
 
   els.forEach(el => el.classList.add('reveal'));
 
@@ -142,3 +142,64 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// ===========================
+// 50 Apps Challenge Countdown
+// ===========================
+(function () {
+  const deadline = new Date('2026-12-01T00:00:00').getTime();
+
+  function update() {
+    const now = Date.now();
+    const diff = Math.max(0, deadline - now);
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    const d = document.querySelector('[data-countdown="days"]');
+    const h = document.querySelector('[data-countdown="hours"]');
+    const m = document.querySelector('[data-countdown="minutes"]');
+    const s = document.querySelector('[data-countdown="seconds"]');
+
+    if (d) d.textContent = String(days).padStart(2, '0');
+    if (h) h.textContent = String(hours).padStart(2, '0');
+    if (m) m.textContent = String(minutes).padStart(2, '0');
+    if (s) s.textContent = String(seconds).padStart(2, '0');
+  }
+
+  update();
+  setInterval(update, 1000);
+})();
+
+// ===========================
+// Tracker dot tooltips
+// ===========================
+(function () {
+  const tooltip = document.getElementById('trackerTooltip');
+  const grid = document.getElementById('trackerGrid');
+  if (!tooltip || !grid) return;
+
+  grid.addEventListener('mouseover', (e) => {
+    const dot = e.target.closest('.tracker__dot');
+    if (!dot) return;
+
+    const name = dot.getAttribute('data-app');
+    const status = dot.getAttribute('data-status');
+    if (!name) return;
+
+    tooltip.textContent = status ? name + ' — ' + status : name;
+    tooltip.classList.add('is-visible');
+
+    const rect = dot.getBoundingClientRect();
+    tooltip.style.left = rect.left + rect.width / 2 - tooltip.offsetWidth / 2 + 'px';
+    tooltip.style.top = rect.top - tooltip.offsetHeight - 8 + 'px';
+  });
+
+  grid.addEventListener('mouseout', (e) => {
+    if (e.target.closest('.tracker__dot')) {
+      tooltip.classList.remove('is-visible');
+    }
+  });
+})();

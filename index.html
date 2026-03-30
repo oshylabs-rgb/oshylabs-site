@@ -21,7 +21,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OshyLabs — Building AI-Powered Products</title>
-<meta name="description" content="OshyLabs builds AI-powered SaaS products for real-world problems. Explore our portfolio of 7 products across legal tech, fintech, property, and more.">
+<meta name="description" content="OshyLabs builds AI-powered SaaS products for real-world problems. Explore our portfolio of 9 products across legal tech, fintech, property, and more.">
 <meta property="og:title" content="OshyLabs — Building AI-Powered Products">
 <meta property="og:description" content="A solo founder's portfolio of AI-powered SaaS products solving real problems.">
 <meta property="og:type" content="website">
@@ -68,6 +68,7 @@
     </a>
     <nav class="nav" role="navigation" aria-label="Main navigation">
       <a href="#products" class="nav__link">Products</a>
+      <a href="#challenge" class="nav__link">Challenge</a>
       <a href="#pricing" class="nav__link">Pricing</a>
       <a href="#about" class="nav__link">About</a>
       <a href="#contact" class="nav__link">Contact</a>
@@ -108,7 +109,7 @@
     </div>
     <div class="hero__stats">
       <div class="stat">
-        <span class="stat__number" data-count="7">0</span>
+        <span class="stat__number" data-count="9">0</span>
         <span class="stat__label">Products</span>
       </div>
       <div class="stat">
@@ -294,6 +295,160 @@
         <span class="product-card__link product-card__link--soon">Coming Soon</span>
       </article>
 
+      <!-- Reviewly -->
+      <article class="product-card">
+        <div class="product-card__icon">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <rect x="4" y="8" width="32" height="24" rx="4" stroke="currentColor" stroke-width="2"/>
+            <path d="M14 18l3 3 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="30" cy="10" r="5" stroke="currentColor" stroke-width="2"/>
+            <path d="M28 10l1.5 1.5L32 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="product-card__badge product-card__badge--building">Building</div>
+        <h3 class="product-card__name">Reviewly</h3>
+        <p class="product-card__desc">AI-powered review response tool for local businesses. Generate personalised, human-sounding replies to Google, Yelp, and TripAdvisor reviews in seconds.</p>
+        <div class="product-card__meta">
+          <span class="meta-tag">AI</span>
+          <span class="meta-tag">Local Business</span>
+          <span class="meta-tag">SaaS</span>
+        </div>
+        <div class="product-card__stack">Next.js · Gemini · Stripe</div>
+        <span class="product-card__link product-card__link--soon">Coming Soon</span>
+      </article>
+
+      <!-- Oshy Studios -->
+      <article class="product-card">
+        <div class="product-card__icon">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="2"/>
+            <path d="M12 20c0-4.4 3.6-8 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M16 14l8 6-8 6V14z" fill="currentColor" opacity="0.15" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="product-card__badge product-card__badge--building">Building</div>
+        <h3 class="product-card__name">Oshy Studios</h3>
+        <p class="product-card__desc">Freelance design studio offering web design, branding, and digital products. Three tiers from startup MVPs to full-scale brand identities.</p>
+        <div class="product-card__meta">
+          <span class="meta-tag">Design</span>
+          <span class="meta-tag">Creative</span>
+          <span class="meta-tag">Freelance</span>
+        </div>
+        <div class="product-card__stack">Figma · Next.js · Stripe</div>
+        <span class="product-card__link product-card__link--soon">Coming Soon</span>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- 50 Apps Challenge -->
+<section class="challenge" id="challenge">
+  <div class="challenge__inner">
+    <div class="challenge__header">
+      <p class="section-tag">The Challenge</p>
+      <h2 class="section-title">50 Apps. One Founder. One Deadline.</h2>
+      <p class="challenge__subtitle">Building and shipping 50 web applications before December 1, 2026. Every app goes from idea to live product — no shortcuts, no vaporware.</p>
+    </div>
+
+    <div class="challenge__stats">
+      <div class="challenge__countdown" id="challengeCountdown">
+        <div class="countdown__item">
+          <span class="countdown__number" data-countdown="days">--</span>
+          <span class="countdown__label">Days</span>
+        </div>
+        <div class="countdown__separator">:</div>
+        <div class="countdown__item">
+          <span class="countdown__number" data-countdown="hours">--</span>
+          <span class="countdown__label">Hours</span>
+        </div>
+        <div class="countdown__separator">:</div>
+        <div class="countdown__item">
+          <span class="countdown__number" data-countdown="minutes">--</span>
+          <span class="countdown__label">Min</span>
+        </div>
+        <div class="countdown__separator">:</div>
+        <div class="countdown__item">
+          <span class="countdown__number" data-countdown="seconds">--</span>
+          <span class="countdown__label">Sec</span>
+        </div>
+      </div>
+
+      <div class="challenge__progress">
+        <div class="progress__bar">
+          <div class="progress__fill" id="progressFill" style="width: 8%"></div>
+        </div>
+        <div class="progress__labels">
+          <span class="progress__count"><strong>4</strong> / 50 shipped</span>
+          <span class="progress__percent">8%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="challenge__tracker">
+      <div class="tracker__grid" id="trackerGrid">
+        <!-- Live apps -->
+        <div class="tracker__dot tracker__dot--live" data-app="ComplaintForge" data-status="Live"></div>
+        <div class="tracker__dot tracker__dot--live" data-app="DBADocs" data-status="Live"></div>
+        <div class="tracker__dot tracker__dot--live" data-app="PagePulse" data-status="Live"></div>
+        <div class="tracker__dot tracker__dot--live" data-app="GetSorted" data-status="Live"></div>
+        <!-- Building apps -->
+        <div class="tracker__dot tracker__dot--building" data-app="Plotmarket" data-status="Building"></div>
+        <div class="tracker__dot tracker__dot--building" data-app="NaijaMarkets" data-status="Building"></div>
+        <div class="tracker__dot tracker__dot--building" data-app="Reviewly" data-status="Building"></div>
+        <div class="tracker__dot tracker__dot--building" data-app="Oshy Studios" data-status="Building"></div>
+        <!-- Parked -->
+        <div class="tracker__dot tracker__dot--parked" data-app="EstateOps" data-status="Parked"></div>
+        <!-- Remaining -->
+        <div class="tracker__dot" data-app="#10"></div>
+        <div class="tracker__dot" data-app="#11"></div>
+        <div class="tracker__dot" data-app="#12"></div>
+        <div class="tracker__dot" data-app="#13"></div>
+        <div class="tracker__dot" data-app="#14"></div>
+        <div class="tracker__dot" data-app="#15"></div>
+        <div class="tracker__dot" data-app="#16"></div>
+        <div class="tracker__dot" data-app="#17"></div>
+        <div class="tracker__dot" data-app="#18"></div>
+        <div class="tracker__dot" data-app="#19"></div>
+        <div class="tracker__dot" data-app="#20"></div>
+        <div class="tracker__dot" data-app="#21"></div>
+        <div class="tracker__dot" data-app="#22"></div>
+        <div class="tracker__dot" data-app="#23"></div>
+        <div class="tracker__dot" data-app="#24"></div>
+        <div class="tracker__dot" data-app="#25"></div>
+        <div class="tracker__dot" data-app="#26"></div>
+        <div class="tracker__dot" data-app="#27"></div>
+        <div class="tracker__dot" data-app="#28"></div>
+        <div class="tracker__dot" data-app="#29"></div>
+        <div class="tracker__dot" data-app="#30"></div>
+        <div class="tracker__dot" data-app="#31"></div>
+        <div class="tracker__dot" data-app="#32"></div>
+        <div class="tracker__dot" data-app="#33"></div>
+        <div class="tracker__dot" data-app="#34"></div>
+        <div class="tracker__dot" data-app="#35"></div>
+        <div class="tracker__dot" data-app="#36"></div>
+        <div class="tracker__dot" data-app="#37"></div>
+        <div class="tracker__dot" data-app="#38"></div>
+        <div class="tracker__dot" data-app="#39"></div>
+        <div class="tracker__dot" data-app="#40"></div>
+        <div class="tracker__dot" data-app="#41"></div>
+        <div class="tracker__dot" data-app="#42"></div>
+        <div class="tracker__dot" data-app="#43"></div>
+        <div class="tracker__dot" data-app="#44"></div>
+        <div class="tracker__dot" data-app="#45"></div>
+        <div class="tracker__dot" data-app="#46"></div>
+        <div class="tracker__dot" data-app="#47"></div>
+        <div class="tracker__dot" data-app="#48"></div>
+        <div class="tracker__dot" data-app="#49"></div>
+        <div class="tracker__dot" data-app="#50"></div>
+      </div>
+      <div class="tracker__legend">
+        <span class="tracker__legend-item"><span class="tracker__dot-inline tracker__dot-inline--live"></span> Live</span>
+        <span class="tracker__legend-item"><span class="tracker__dot-inline tracker__dot-inline--building"></span> Building</span>
+        <span class="tracker__legend-item"><span class="tracker__dot-inline tracker__dot-inline--parked"></span> Parked</span>
+        <span class="tracker__legend-item"><span class="tracker__dot-inline"></span> Upcoming</span>
+      </div>
+      <div class="tracker__tooltip" id="trackerTooltip"></div>
     </div>
   </div>
 </section>

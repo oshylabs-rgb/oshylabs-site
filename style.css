@@ -583,6 +583,235 @@
 }
 
 /* ===========================
+   50 Apps Challenge
+   =========================== */
+.challenge {
+  padding: clamp(var(--space-16), 10vw, var(--space-32)) var(--space-6);
+  background: var(--color-surface-2);
+  overflow: hidden;
+}
+
+.challenge__inner {
+  max-width: var(--content-default);
+  margin: 0 auto;
+}
+
+.challenge__header {
+  text-align: center;
+  margin-bottom: clamp(var(--space-8), 4vw, var(--space-16));
+}
+
+.challenge__subtitle {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  max-width: 540px;
+  margin: var(--space-4) auto 0;
+  line-height: 1.7;
+}
+
+/* Countdown */
+.challenge__stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8);
+  margin-bottom: clamp(var(--space-8), 4vw, var(--space-12));
+}
+
+.challenge__countdown {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.countdown__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 72px;
+  padding: var(--space-4) var(--space-4);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.countdown__number {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--color-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown__label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-top: var(--space-1);
+}
+
+.countdown__separator {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  opacity: 0.4;
+  padding-bottom: var(--space-4);
+}
+
+/* Progress bar */
+.challenge__progress {
+  width: 100%;
+  max-width: 480px;
+}
+
+.progress__bar {
+  width: 100%;
+  height: 10px;
+  background: var(--color-border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progress__fill {
+  height: 100%;
+  background: var(--color-live);
+  border-radius: var(--radius-full);
+  transition: width 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.progress__labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+/* Tracker grid */
+.challenge__tracker {
+  position: relative;
+}
+
+.tracker__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  padding: var(--space-6) 0;
+}
+
+.tracker__dot {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-md);
+  background: var(--color-border);
+  cursor: default;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.tracker__dot:hover {
+  transform: scale(1.3);
+  z-index: 2;
+}
+
+.tracker__dot--live {
+  background: var(--color-live);
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-live) 40%, transparent);
+  animation: dotPulse 2.5s ease-in-out infinite;
+}
+
+.tracker__dot--building {
+  background: var(--color-building);
+}
+
+.tracker__dot--parked {
+  background: var(--color-text-muted);
+  opacity: 0.4;
+}
+
+@keyframes dotPulse {
+  0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-live) 40%, transparent); }
+  50% { box-shadow: 0 0 0 6px color-mix(in srgb, var(--color-live) 0%, transparent); }
+}
+
+/* Legend */
+.tracker__legend {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+  padding-top: var(--space-4);
+}
+
+.tracker__legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.tracker__dot-inline {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  background: var(--color-border);
+}
+
+.tracker__dot-inline--live {
+  background: var(--color-live);
+}
+
+.tracker__dot-inline--building {
+  background: var(--color-building);
+}
+
+.tracker__dot-inline--parked {
+  background: var(--color-text-muted);
+  opacity: 0.4;
+}
+
+/* Tooltip */
+.tracker__tooltip {
+  position: fixed;
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-text);
+  color: var(--color-bg);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  white-space: nowrap;
+  z-index: 100;
+}
+
+.tracker__tooltip.is-visible {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .countdown__item {
+    min-width: 56px;
+    padding: var(--space-3);
+  }
+  .countdown__number {
+    font-size: 1.5rem;
+  }
+  .tracker__dot {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* ===========================
    Pricing
    =========================== */
 .pricing {
