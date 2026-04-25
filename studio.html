@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oshy Studio — A studio that ships</title>
+<meta name="description" content="Oshy Studio is the service arm of OshyLabs. We ship our own software and partner with three teams a year to ship theirs. Sprint, Build, Embed.">
+<meta property="og:title" content="Oshy Studio — A studio that ships">
+<meta property="og:description" content="A studio that builds its own software, and takes on three partner builds a year. We charge fairly, ship fast, and refuse briefs we can't make great.">
+<meta property="og:type" content="website">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F2EFE9'/%3E%3Ctext x='50%25' y='62%25' text-anchor='middle' font-family='Georgia,serif' font-size='22' font-weight='600' fill='%23C0533C'%3EO%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="studio.css">
+</head>
+<body>
+
+<!-- Skip link -->
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- Paper grain overlay -->
+<div class="paper-grain" aria-hidden="true"></div>
+
+<!-- Navbar -->
+<header class="studio-nav" role="banner">
+  <div class="studio-nav__inner">
+    <a href="studio.html" class="studio-mark">
+      <span class="studio-mark__o">O</span>
+      <span class="studio-mark__text">Oshy Studio</span>
+    </a>
+    <nav class="studio-nav__links" aria-label="Main">
+      <a href="#ledger" class="nav-link">Ledger</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#process" class="nav-link">Process</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <a href="index.html" class="nav-link nav-link--back">← OshyLabs</a>
+    </nav>
+    <span class="status-pill" aria-label="Availability">
+      <span class="status-pill__dot"></span>
+      <span class="status-pill__text">Currently: 1 slot open · Q3</span>
+    </span>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- 01 — Opening Line -->
+  <section class="hero" aria-labelledby="hero-h1">
+    <div class="hero__inner">
+      <p class="kicker">Oshy Studio · Est 2026</p>
+      <h1 id="hero-h1" class="hero__h1">We ship things that work.</h1>
+      <p class="hero__sub">A studio that builds its own software, and takes on three partner builds a year. We charge fairly, ship fast, and refuse briefs we can't make great.</p>
+      <div class="hero__ctas">
+        <a href="#contact" class="btn-primary">Start a project <span class="arrow">→</span></a>
+        <a href="#ledger" class="btn-secondary">Or see what we've shipped</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 — The Shipping Ledger -->
+  <section class="section" id="ledger" aria-labelledby="ledger-h2">
+    <div class="section__inner">
+      <p class="kicker">02 / The ledger</p>
+      <h2 id="ledger-h2" class="section__h2">What we've shipped.</h2>
+      <p class="section__intro">Ten products in eighteen months. A few are quiet. A few are paying rent. All of them taught us something we now charge for.</p>
+
+      <div class="ledger" role="table" aria-label="Shipping ledger">
+        <div class="ledger__row" role="row">
+          <span class="ledger__name" role="cell"><a href="https://www.complaintforge.com" target="_blank" rel="noopener noreferrer">ComplaintForge</a></span>
+          <span class="ledger__desc" role="cell">Turns messy email chains into formal Ombudsman packs.</span>
+          <span class="ledger__status" role="cell">Live · UK · paying</span>
+        </div>
+        <div class="ledger__row" role="row">
+          <span class="ledger__name" role="cell"><a href="https://www.dbadocs.app" target="_blank" rel="noopener noreferrer">DBADocs</a></span>
+          <span class="ledger__desc" role="cell">AI legal documents for US small business.</span>
+          <span class="ledger__status" role="cell">Live · US · paying</span>
+        </div>
+        <div class="ledger__row" role="row">
+          <span class="ledger__name" role="cell"><a href="https://getsorted.site" target="_blank" rel="noopener noreferrer">GetSorted</a></span>
+          <span class="ledger__desc" role="cell">UK self-assessment, rebuilt from scratch.</span>
+          <span class="ledger__status" role="cell">Live · UK · in growth</span>
+        </div>
+        <div class="ledger__row" role="row">
+          <span class="ledger__name" role="cell"><a href="https://glowdesk.se" target="_blank" rel="noopener noreferrer">GlowDesk</a></span>
+          <span class="ledger__desc" role="cell">Practice management for aesthetic clinics, Sweden first.</span>
+          <span class="ledger__status" role="cell">Live · Nordics · early</span>
+        </div>
+        <div class="ledger__row" role="row">
+          <span class="ledger__name" role="cell"><a href="https://pagepulse.se" target="_blank" rel="noopener noreferrer">PagePulse</a></span>
+          <span class="ledger__desc" role="cell">Website analytics that read like a useful email.</span>
+          <span class="ledger__status" role="cell">Live · in beta</span>
+        </div>
+        <div class="ledger__row" role="row">
+          <span class="ledger__name" role="cell">Reviewly</span>
+          <span class="ledger__desc" role="cell">Auto-drafts review responses for local businesses.</span>
+          <span class="ledger__status" role="cell">Building · global</span>
+        </div>
+        <div class="ledger__row" role="row">
+          <span class="ledger__name" role="cell">Oshy Studio</span>
+          <span class="ledger__desc" role="cell">The studio you're on right now.</span>
+          <span class="ledger__status" role="cell">This site</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 — The Note -->
+  <section class="section section--note" aria-labelledby="note-h2">
+    <div class="section__inner section__inner--measure">
+      <p class="kicker">03 / A note</p>
+      <h2 id="note-h2" class="visually-hidden">A note from the founder</h2>
+      <div class="note">
+        <p class="note__p">I started this studio because I kept building things at night that solved problems I had during the day. ComplaintForge came from a heating failure. DBADocs came from watching small businesses pay solicitors for templates. GetSorted came from spending a weekend with HMRC.</p>
+        <p class="note__p">Most agencies sell you their time. We sell you <span class="highlight">what we've already learned how to do</span>. If we take you on, you're paying for a studio that has already shipped the hard version of your idea, in some shape, before.</p>
+        <p class="note__p">We take three partner projects a year. Sometimes four. Never more.</p>
+        <p class="note__sig">Arnold, founder</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 — What We'll Ship For You -->
+  <section class="section" id="services" aria-labelledby="services-h2">
+    <div class="section__inner">
+      <p class="kicker">04 / What we'll ship for you</p>
+      <h2 id="services-h2" class="section__h2">Three ways to work with us.</h2>
+
+      <div class="ship-options">
+
+        <article class="ship-option">
+          <div class="ship-option__num">01</div>
+          <div class="ship-option__body">
+            <h3 class="ship-option__name">The Sprint</h3>
+            <p class="ship-option__hint"><em>Two weeks. One outcome. Fixed price.</em></p>
+            <p class="ship-option__desc">You bring a brief. We come back in fourteen days with a working thing: a launched landing page, a built-and-shipped MVP feature, a fully migrated checkout, a redesigned onboarding flow. We don't ship slides.</p>
+            <p class="ship-option__price">From £6,000 · 1 slot per month</p>
+            <a href="#contact" class="btn-secondary">Start a Sprint <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="ship-option">
+          <div class="ship-option__num">02</div>
+          <div class="ship-option__body">
+            <h3 class="ship-option__name">The Build</h3>
+            <p class="ship-option__hint"><em>Six to twelve weeks. Whole product, shipped.</em></p>
+            <p class="ship-option__desc">For founders who have a real idea and want a studio to ship version one with them. You get our full stack (Next.js, Supabase, Stripe, Claude API), our taste, and weekly demos. You own the code and the brand.</p>
+            <p class="ship-option__price">From £24,000 · 3 slots a year</p>
+            <a href="#contact" class="btn-secondary">Start a Build <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="ship-option">
+          <div class="ship-option__num">03</div>
+          <div class="ship-option__body">
+            <h3 class="ship-option__name">The Embed</h3>
+            <p class="ship-option__hint"><em>Quarterly retainer. We act as your product team.</em></p>
+            <p class="ship-option__desc">For founders who already have something live and need a sharper team than they can hire. We embed for a quarter, ship continuously, and step back when you're stable. No long contracts.</p>
+            <p class="ship-option__price">From £14,000 a quarter · 1 client at a time</p>
+            <a href="#contact" class="btn-secondary">Start an Embed <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="services-note">Prices are starting points. If your brief is smaller, simpler, or strange, write anyway. We negotiate when there's a reason to.</p>
+    </div>
+  </section>
+
+  <!-- 07 — How We Work -->
+  <section class="section section--alt" id="process" aria-labelledby="process-h2">
+    <div class="section__inner">
+      <p class="kicker">07 / Process</p>
+      <h2 id="process-h2" class="section__h2">What working with us looks like.</h2>
+
+      <ol class="process">
+        <li class="process__step">
+          <div class="process__num">01</div>
+          <div class="process__body">
+            <h3 class="process__h3"><em>We talk for thirty minutes.</em></h3>
+            <p>You explain the problem. We tell you whether we can help. If we can't, we say who can.</p>
+          </div>
+        </li>
+        <li class="process__step">
+          <div class="process__num">02</div>
+          <div class="process__body">
+            <h3 class="process__h3"><em>We send a one-page brief.</em></h3>
+            <p>Scope, deliverables, price, timeline. Either you sign it or you don't. We don't do follow-ups.</p>
+          </div>
+        </li>
+        <li class="process__step">
+          <div class="process__num">03</div>
+          <div class="process__body">
+            <h3 class="process__h3"><em>We ship every Friday.</em></h3>
+            <p>You see what's built each week. You can stop at the end of any week with no penalty.</p>
+          </div>
+        </li>
+        <li class="process__step">
+          <div class="process__num">04</div>
+          <div class="process__body">
+            <h3 class="process__h3"><em>We hand it over and step back.</em></h3>
+            <p>Code, brand, content, accounts. All yours. We answer questions for thirty days.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 08 — Ledger of Refusal -->
+  <section class="section section--refusal">
+    <div class="section__inner">
+      <p class="kicker eyebrow">What we don't do.</p>
+      <div class="refusal">
+        <p><em>We don't pitch.</em></p>
+        <p><em>We don't subcontract.</em></p>
+        <p><em>We don't take a brief we can't make great.</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 — Final CTA -->
+  <section class="section section--final" id="contact" aria-labelledby="final-h2">
+    <div class="section__inner section__inner--center">
+      <h2 id="final-h2" class="final__h2">Ready when you are.</h2>
+      <p class="final__sub">Tell us what you're trying to ship. We reply within two working days, or tell you it's not a fit.</p>
+      <div class="final__ctas">
+        <a href="mailto:arnold.oshenye@oshylabs.eu?subject=Oshy%20Studio%20%E2%80%94%20Project%20enquiry&body=Hi%20Arnold%2C%0A%0AI%27m%20interested%20in%20%5BSprint%20%2F%20Build%20%2F%20Embed%5D.%0A%0AHere%27s%20what%20I%27m%20trying%20to%20ship%3A%0A%0A%0AAbout%20me%2Fmy%20company%3A%0A%0A%0ARough%20budget%3A%0A%0A%0AThanks%2C" class="btn-primary">Start a project <span class="arrow">→</span></a>
+        <a href="https://x.com/oshylabs1" target="_blank" rel="noopener noreferrer" class="btn-secondary">Or message on X</a>
+      </div>
+      <p class="final__contact">arnold.oshenye@oshylabs.eu</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="studio-footer" role="contentinfo">
+  <div class="studio-footer__inner">
+    <div class="studio-footer__col">
+      <p class="studio-footer__block">Oshy Studio is a brand of <strong>OshyLabs Ltd</strong>.<br>
+      Company No. 16883720.<br>
+      Registered in England and Wales.</p>
+    </div>
+    <div class="studio-footer__col">
+      <nav aria-label="Footer">
+        <a href="index.html" class="footer-link">Products</a>
+        <a href="#services" class="footer-link">Services</a>
+        <a href="#process" class="footer-link">Process</a>
+        <a href="#contact" class="footer-link">Contact</a>
+      </nav>
+    </div>
+    <div class="studio-footer__col">
+      <p class="studio-footer__reach">
+        <a href="mailto:arnold.oshenye@oshylabs.eu" class="footer-link">arnold.oshenye@oshylabs.eu</a><br>
+        <a href="https://x.com/oshylabs1" target="_blank" rel="noopener noreferrer" class="footer-link">@oshylabs1</a><br>
+        <a href="https://www.tiktok.com/@oshylabs" target="_blank" rel="noopener noreferrer" class="footer-link">TikTok</a>
+      </p>
+    </div>
+  </div>
+  <div class="studio-footer__colophon">
+    <p>Designed and built in Stockholm and London. Hosted on Vercel. Set in Fraunces and Inter.</p>
+  </div>
+</footer>
+
+</body>
+</html>
